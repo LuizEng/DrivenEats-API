@@ -8,16 +8,5 @@ services:
       - "8085:8085"
     environment:
       - SPRING_PROFILES_ACTIVE=dev
-    depends_on:
-      - mysql
-  mysql:
-    image: mysql:8.0.26
-    environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: driven_eats
-#      MYSQL_USER: root
-#      MYSQL_PASSWORD: root
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-    ports:
-      - "3306:3306"      
+   
 

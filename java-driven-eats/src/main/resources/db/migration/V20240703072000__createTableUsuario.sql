@@ -1,0 +1,11 @@
+CREATE TABLE usuario (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  documento VARCHAR(11) NOT NULL,
+  email VARCHAR(65) NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  dataCriacao DATETIME NULL DEFAULT now(),
+  PRIMARY KEY (id),
+  UNIQUE INDEX documento_UNIQUE (documento ASC),
+  UNIQUE INDEX email_UNIQUE (email ASC)
+);
